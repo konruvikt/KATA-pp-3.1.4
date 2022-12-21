@@ -34,7 +34,7 @@ public class AdminController {
 
     @PostMapping("/user-create")
     public String createUser(User user){
-        userService.saveUser(user);
+        userService.saveOrUpdateUser(user);
         return "redirect:/admin";
     }
 
@@ -58,7 +58,7 @@ public class AdminController {
 
     @PatchMapping("/user-update")
     public String updateUser(User user){
-        userService.saveUser(user);
+        userService.saveOrUpdateUser(user);
         return "redirect:/admin";
     }
 }

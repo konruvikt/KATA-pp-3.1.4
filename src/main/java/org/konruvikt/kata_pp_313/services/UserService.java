@@ -38,7 +38,7 @@ public class UserService implements UserDetailsService {
     }
 
     @Transactional
-    public void saveUser(User user){
+    public void saveOrUpdateUser(User user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
